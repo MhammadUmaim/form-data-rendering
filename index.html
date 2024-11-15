@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Checking Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./result.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="main">
+        <h2>Check Your Result</h2>
+        <div class="inpParent">
+            <div class="name">
+                <input type="text" placeholder="Enter your Name" oninput="blurInp(event, 'name')" />
+                <span class="name-error error"></span>
+            </div>
+            <div class="pass">
+                <input type="text" placeholder="Enter your Roll Number" oninput="blurInp(event, 'RN')" />
+                <span class="pass-error error"></span>
+            </div>
+            <div class="email">
+                <input type="text" placeholder="Enter your Email" oninput="blurInp(event, 'mail')" />
+                <span class="email-error error"></span>
+            </div>
+            <div class="submit">
+                <button type="button" onclick="showData()">Check</button>
+            </div>
+        </div>
+
+        <!-- Table to Display Data -->
+        <div class="data">
+            <table border="1px">
+                <tr>
+                    <th>Name</th>
+                    <th>Roll Number</th>
+                    <th>Contact</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td id="name"></td>
+                    <td id="RN"></td>
+                    <td id="Con"></td>
+                    <td id="Res"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

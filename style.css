@@ -1,0 +1,128 @@
+body {
+      
+    background: linear-gradient(135deg, #000000, #424242);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #ffffff;
+    overflow: hidden; /* Hide overflow caused by animations */
+}
+
+.inpParent {
+    background: rgba(10, 10, 10, 0.8); /* Dark semi-transparent background */
+    border-radius: 20px;
+    padding: 40px;
+    width: 420px;
+    box-shadow: 0 8px 32px rgba(255, 0, 0, 0.6), 0 15px 25px rgba(0, 255, 255, 0.4); /* Floating shadow */
+    border: 2px solid #ff4c4c; /* Neon Red Border */
+    text-align: center;
+    animation: neon 1.5s ease-in-out infinite alternate, glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.8);
+    }
+}
+
+@keyframes glow {
+    0% {
+        background-color: rgba(10, 10, 10, 0.85);
+    }
+    100% {
+        background-color: rgba(10, 10, 10, 0.95);
+    }
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 1);
+    font-weight: 600;
+}
+
+input {
+    padding: 15px;
+    margin: 15px -15px;
+    /* margin-right: 15px; */
+    width: 100%;
+    border: 2px solid #00ffff; /* Neon Blue Border */
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: transparent;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 1);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    border-color: #ff4c4c; /* Neon Red Border on Focus */
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05); /* Subtle scaling effect */
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #ff4c4c, #00ffff); /* Neon Gradient */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 1), 0 0 10px rgba(0, 255, 255, 1);
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 0 0 25px rgba(0, 255, 255, 0.6);
+    background: linear-gradient(45deg, #ff3333, #33ccff); /* Subtle gradient change on hover */
+}
+
+.data {
+    margin-top: 20px;
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(10, 10, 10, 0.8);
+    border-radius: 10px;
+    border: 2px solid aqua;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid aqua;
+    color: white;
+    font-size: 1.1rem;
+}
+
+th {
+    background: #00ffff;
+    color: #000;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 1);
+}
+
+td {
+    background: rgba(255, 255, 255, 0.1);
+}
